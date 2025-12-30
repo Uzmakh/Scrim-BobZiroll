@@ -1,0 +1,17 @@
+header {
+  background-color: red;
+  color: white;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+header>div .globe {
+  width: 32px;
+}
+
+h2 {
+  font-size: 0.9rem;
+}

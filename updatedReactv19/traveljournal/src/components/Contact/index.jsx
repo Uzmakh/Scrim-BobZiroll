@@ -1,0 +1,25 @@
+import "./index.css";
+
+const Contact = ({img,name,phone,email}) => {
+ 
+  return (
+    <div className="container">
+    <div className="contacts">
+      <article className="contact-card">
+        <img src={img} alt="Photo of Mr. Whiskerson" />
+        <h3>{name}</h3>
+        <div className="info-group">
+          <img src="src/assets/phone-icon.png" alt="phone icon" />
+          <p>{phone}</p>
+        </div>
+        <div className="info-group">
+          <img src="src/assets/mail-icon.png" alt="mail icon" />
+          <p>{email}</p>
+        </div>
+      </article>
+    </div>
+    </div>
+  );
+};
+
+export default Contact;
