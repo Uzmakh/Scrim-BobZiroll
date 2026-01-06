@@ -1,7 +1,8 @@
+import { useState } from "react";
 import "./index.css";
 
 const Main = () => {
-  const ingredients = ["chicken", "oregano", "tomatoes"];
+  const [ingredients, setIngredients] = useState([]);
 
   const ingredientListItems = ingredients.map((ingredient) => (
     <li key={ingredient}> {ingredient}</li>
@@ -14,13 +15,14 @@ const Main = () => {
     const formData = new FormData(e.currentTarget);
     const newIngredient = formData.get("ingredient");
     // console.log(newIngredient);
-    ingredients.push(newIngredient);
-    console.log(ingredients);
+    // ingredients.push(newIngredient);
+    // console.log(ingredients);
+    setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   };
 
   return (
-    <main>
-      {/*  eslint-disable-next-line react-hooks/immutability */}
+    <Main>
+      
       <form className="add-ingredient-form" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -31,7 +33,7 @@ const Main = () => {
         <button>Add ingredient</button>
       </form>
       <ul>{ingredientListItems}</ul>
-    </main>
+    </Main>
   );
 };
 
