@@ -1,6 +1,9 @@
 main {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   padding: 30px 30px 10px;
+  max-width: 1170px;
+  width: 80%;
+  margin: auto;
 }
 
 .add-ingredient-form {
@@ -36,4 +39,8 @@ main {
 .add-ingredient-form>button::before {
   content: "+";
   margin-right: 5px;
+}
+
+li {
+  list-style: none;
 }
