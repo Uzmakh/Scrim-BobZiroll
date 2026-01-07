@@ -7,6 +7,8 @@ import Form from "./components/StateWithObjects/Form";
 import NestedObject from "./components/StateWithObjects/NestedObject";
 import Parent from "./components/StateWithArrays/Parent";
 import ComplexStateArray from "./components/ComplexStatewithArray/ComplexStateArray";
+import ObjectState from "./components/ComplexStateWithObjects/ObjectState";
+import FormAction from "./components/FormAction/FormAction";
 
 const App = () => {
   return (
@@ -19,7 +21,9 @@ const App = () => {
       <Form />
       <NestedObject />
       <Parent />
-      <ComplexStateArray/>
+      <ComplexStateArray />
+      <ObjectState />
+      <FormAction/>
     </div>
   );
 };
