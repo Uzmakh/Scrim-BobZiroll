@@ -17,7 +17,7 @@ const Main = () => {
   };
 
   return (
-    <Main>
+    <main>
       <form className="add-ingredient-form" action={addIngredient}>
         <input
           type="text"
@@ -27,8 +27,8 @@ const Main = () => {
         />
         <button>Add ingredient</button>
       </form>
-      <ul>{ingredientListItems}</ul>
-    </Main>
+      <ul className="listItems">{ingredientListItems}</ul>
+    </main>
   );
 };
 
