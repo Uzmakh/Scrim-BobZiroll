@@ -41,6 +41,7 @@ main {
   margin-right: 5px;
 }
 
-li {
+.listItems {
+  padding: 30px;
   list-style: none;
 }
