@@ -8,22 +8,17 @@ const Main = () => {
     <li key={ingredient}> {ingredient}</li>
   ));
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const addIngredient = (formData) => {
     console.log("Form submitted!");
-    // getting new ingredient, when user types in input field
-    const formData = new FormData(e.currentTarget);
+
     const newIngredient = formData.get("ingredient");
-    // console.log(newIngredient);
-    // ingredients.push(newIngredient);
-    // console.log(ingredients);
-    setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
+
+    setIngredients(prevIngredients => [...prevIngredients, newIngredient]);
   };
 
   return (
     <Main>
-      
-      <form className="add-ingredient-form" onSubmit={handleSubmit}>
+      <form className="add-ingredient-form" action={addIngredient}>
         <input
           type="text"
           aria-label="Add ingredient"
